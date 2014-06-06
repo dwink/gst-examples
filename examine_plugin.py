@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-# Example 1
+
+# Examine a Plugin
 
 import gi
 gi.require_version("Gst", "1.0")
