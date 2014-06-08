@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="home">
+
+	<div class="post">
+		<header class="post-header">
+			<h1>Welcome!</h1>
+		</header>
+		<article class="post-content">
+			<p>Weary traveler, in search of some concrete examples of how to use GStreamer with Python3 and GObject-Introspection, search no further! In using the lovely GStreamer framework for a project at work, I, too, sought expert advice on these topics, only to find that the examples I could find were for legacy versions of Python or the old 0.10 series of GStreamer releases!</p>
+			<p>I learn best by doing, so as I figured out the framework and how to use it with Python, I decided that my example code might be helpful for the larger community. So here it is, for your enjoyment.</p>
+			<p><em>One note:</em> I'm not really an expert on GStreamer (yet), so while I've tested these with the 1.x GStreamer releases I've been using, there's no guarantees or warranties or any other -ies. Just some code to help you find the logic in the system and build your own expertise.</p>
+			<p>You can grab all of the examples via the <a href="https://github.com/dwink/gst-examples">git repo</a>:</p>
+{% highlight bash %}
+$ git clone https://github.com/dwink/gst-examples.git
+{% endhighlight %}	
+		</article>
+	</div>
+  <ul class="posts">
+    {% for post in paginator.posts reversed %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+		<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="pagination">
+	  {% if paginator.previous_page %}
+		      <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+	    {% else %}
+		      <span class="previous">Previous</span>
+	    {% endif %}
+	    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+	    {% if paginator.next_page %}
+		      <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+	    {% else %}
+		      <span class="next ">Next</span>
+	    {% endif %}
+	</div>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
