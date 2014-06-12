@@ -2,7 +2,7 @@
 title: How I Learned To Stop Worrying And Love GStreamer
 email: dave@dwink.net
 description: "GStreamer examples for Python3 and GObject-Introspection"
-baseurl: "/gst-examples/"
+baseurl: "/gst-examples"
 url: "http://dwink.github.io"
 paginate: 5
 username: dwink
