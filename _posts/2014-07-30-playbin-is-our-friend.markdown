@@ -2,6 +2,7 @@
 layout: post
 title: "Playbin Is Our Friend"
 date: "Wed Jul 30 06:55:47 -0500 2014"
+published: false
 ---
 
 As the title says, Gstreamer's `playbin` element is a versatile, easy-to-use, jack-of-all trades way to build a pipeline without needing to know much at all up front.
